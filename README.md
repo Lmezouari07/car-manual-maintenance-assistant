@@ -1,2 +1,14 @@
-# Car-Manual-Maintenance-Assistant
-Car Manual &amp; Maintenance Assistant is an AI-powered app that lets users upload car manuals, ask vehicle-specific questions, track maintenance schedules, and receive service reminders. Manuals are preloaded when available or requested from users if missing.
+# Car Manual & Maintenance Assistant
+
+## Description
+This project is an AI assistant that helps car owners understand their car manuals,
+track maintenance, and receive service reminders.
+
+## Features
+- Upload car owner manuals (PDF)
+- Ask questions about your car
+- Track maintenance schedule
+- Get maintenance reminders
+
+## Status
+ Project under development
