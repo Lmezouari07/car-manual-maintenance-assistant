@@ -6,7 +6,7 @@ app = FastAPI()
 
 @app.get("/")
 def read_root():
-    return {"message": "Car Manual & Maintenance Assistant is running "}
+    return {"message": "Car Manual & Maintenance Assistant is running 🚗"}
 
 @app.get("/read-manual")
 def read_manual(file_name: str):
