@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Manual & Maintenance Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fas fa-car"></i>
+                <span>Car Assistant</span>
+            </div>
+            
+            <div class="upload-section">
+                <h3><i class="fas fa-upload"></i> Upload Manual</h3>
+                <div class="upload-area" id="uploadArea">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <p>Drag & drop PDF here</p>
+                    <span>or</span>
+                    <label class="upload-btn">
+                        Browse Files
+                        <input type="file" id="fileInput" accept=".pdf" hidden>
+                    </label>
+                </div>
+                <div class="upload-progress" id="uploadProgress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <span id="uploadStatus">Uploading...</span>
+                </div>
+            </div>
+            
+            <div class="manuals-section">
+                <h3><i class="fas fa-book"></i> My Manuals</h3>
+                <ul class="manuals-list" id="manualsList">
+                    <!-- Manuals will be loaded here -->
+                </ul>
+            </div>
+        </aside>
+        
+        <!-- Main Chat Area -->
+        <main class="chat-container">
+            <header class="chat-header">
+                <div class="header-info">
+                    <h1>Car Manual Assistant</h1>
+                    <p id="currentManual">No manual selected</p>
+                </div>
+                <div class="header-actions">
+                    <button class="btn-icon" id="clearChat" title="Clear chat">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </div>
+            </header>
+            
+            <div class="chat-messages" id="chatMessages">
+                <div class="welcome-message">
+                    <div class="welcome-icon">
+                        <i class="fas fa-car-side"></i>
+                    </div>
+                    <h2>Welcome to Car Manual Assistant</h2>
+                    <p>Upload your car manual and ask any questions about maintenance, features, or troubleshooting.</p>
+                    <div class="example-questions">
+                        <h4>Try asking:</h4>
+                        <button class="example-btn" onclick="askExample('How do I change the oil?')">
+                            <i class="fas fa-oil-can"></i> How do I change the oil?
+                        </button>
+                        <button class="example-btn" onclick="askExample('What does the check engine light mean?')">
+                            <i class="fas fa-engine-warning"></i> What does the check engine light mean?
+                        </button>
+                        <button class="example-btn" onclick="askExample('What is the recommended tire pressure?')">
+                            <i class="fas fa-tire"></i> What is the recommended tire pressure?
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="chat-input-container">
+                <form id="chatForm" class="chat-input-form">
+                    <div class="input-wrapper">
+                        <textarea 
+                            id="questionInput" 
+                            placeholder="Ask a question about your car manual..."
+                            rows="1"
+                        ></textarea>
+                        <button type="submit" id="sendBtn" disabled>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </form>
+                <p class="input-hint">Press Enter to send, Shift+Enter for new line</p>
+            </div>
+        </main>
+    </div>
+    
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <i class="fas fa-check-circle"></i>
+        <span id="toastMessage">Success!</span>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
