@@ -1,0 +1,16 @@
+# FastAPI & Server
+fastapi
+uvicorn
+
+# PDF Processing
+pypdf
+
+# OpenAI & LLM
+openai
+
+# Environment Variables
+python-dotenv
+
+# Utilities
+python-multipart
+
